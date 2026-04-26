@@ -15,25 +15,24 @@ void setup() {
   myServo.attach(13); 
 }
 void loop() {
-  for(int i=0;i<=180;i++){  // Servo berputar 180 derajat
-  myServo.write(i);
-  delay(30);
-  distance = calculateDistance();
-  
-  Serial.print(i);
-  Serial.print(","); 
-  Serial.print(distance); 
-  Serial.print("."); 
+  for(int i = 0; i <= 180; i++){
+    myServo.write(i);
+    delay(30);
+    distance = calculateDistance();
+    Serial.print(i);
+    Serial.print(",");
+    Serial.print(distance);
+    Serial.print(".");  
   }
 
-  for(int i=180;i>0;i--){  
-  myServo.write(i);
-  delay(30);
-  distance = calculateDistance();
-  Serial.print(i);
-  Serial.print(",");
-  Serial.print(distance);
-  Serial.print(".");
+  for(int i = 180; i > 0; i--){
+    myServo.write(i);
+    delay(30);
+    distance = calculateDistance();
+    Serial.print(i);
+    Serial.print(",");
+    Serial.print(distance);
+    Serial.print(".");
   }
 }
 int calculateDistance(){ 
